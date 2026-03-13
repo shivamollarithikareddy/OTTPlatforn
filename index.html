@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>CineAura - Movie Library</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="icon" type="image/png" href="Photos/favicon-32x32.png">
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<input type="checkbox" id="theme-toggle" hidden>
+
+<div class="page">
+
+<label for="theme-toggle" class="theme-btn">
+
+🌙Theme
+
+</label>
+
+
+<header>
+<img src="logo.png" class="logo">
+CineAura 🎬
+
+</header>
+
+<nav>
+    
+
+<a href="index.html">Home</a>
+
+<a href="movies.html">Movies</a>
+
+<a href="trending.html">Trending</a>
+
+<a href="contact.html">Contact</a>
+
+</nav>
+
+
+<h1 class="text-center mt-4">
+
+Movie Library
+
+</h1>
+
+
+<div class="container text-center mt-3">
+
+<input type="text" id="searchMovie" placeholder="Search Movies..." class="form-control w-50 mx-auto">
+
+</div>
+
+
+<div class="text-center mt-4">
+
+<button class="btn btn-outline-danger genre" data-genre="action">Action</button>
+<button class="btn btn-outline-primary genre" data-genre="drama">Drama</button>
+<button class="btn btn-outline-success genre" data-genre="comedy">Comedy</button>
+<button class="btn btn-outline-warning genre" data-genre="sci">Sci-Fi</button>
+
+</div>
+
+<div class="container mt-4">
+
+<div class="container mt-4">
+
+<div id="movieCarousel" class="carousel slide" data-bs-ride="carousel">
+
+<div class="carousel-indicators">
+<button type="button" data-bs-target="#movieCarousel" data-bs-slide-to="0" class="active"></button>
+<button type="button" data-bs-target="#movieCarousel" data-bs-slide-to="1"></button>
+<button type="button" data-bs-target="#movieCarousel" data-bs-slide-to="2"></button>
+</div>
+
+<div class="carousel-inner">
+
+<div class="carousel-item active">
+<img src="Dhurandhar.jpg" class="d-block w-100 carousel-img">
+<div class="carousel-caption">
+<h3>Dhurandhar</h3>
+<p>Action Thriller Suspense</p>
+</div>
+</div>
+
+<div class="carousel-item">
+<img src="rrr.jpg" class="d-block w-100 carousel-img">
+<div class="carousel-caption">
+<h3>RRR</h3>
+<p>Epic action blockbuster.</p>
+</div>
+</div>
+
+<div class="carousel-item">
+<img src="Interstellar.jpg" class="d-block w-100 carousel-img">
+<div class="carousel-caption">
+<h3>Interstellar</h3>
+<p>Sci-fi masterpiece.</p>
+</div>
+</div>
+
+</div>
+
+<button class="carousel-control-prev" type="button" data-bs-target="#movieCarousel" data-bs-slide="prev">
+<span class="carousel-control-prev-icon"></span>
+</button>
+
+<button class="carousel-control-next" type="button" data-bs-target="#movieCarousel" data-bs-slide="next">
+<span class="carousel-control-next-icon"></span>
+</button>
+
+</div>
+
+</div>
+<div class="featured container mt-5">
+
+<h3>🔥 Featured Movie</h3>
+
+<div class="featured-card">
+
+<img src="Avengers.jpg">
+
+<div>
+
+<h2>Avengers Endgame</h2>
+
+<p>
+
+Earth’s mightiest heroes unite for the final battle against Thanos.
+
+</p>
+
+<button onclick="playTrailer()">▶ Watch Trailer</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="movie-grid container mt-5">
+
+
+<a href="avengers.html">
+
+<div class="movie-card">
+
+<i class="fa-solid fa-heart fav"></i>
+
+<img src="Avengers.jpg">
+
+<h4>Avengers Endgame</h4>
+
+<p>Superhero Action Sci-Fi</p>
+
+<p>⭐9/10</p>
+
+</div>
+
+</a>
+
+
+
+<a href="idiots.html">
+
+<div class="movie-card">
+
+<i class="fa-solid fa-heart fav"></i>
+
+<img src="3idiots.jpg">
+
+<h4>3 Idiots</h4>
+
+<p>Comedy Drama</p>
+
+<p>⭐9.5/10</p>
+
+</div>
+
+</a>
+
+
+
+<a href="rrr.html">
+
+<div class="movie-card">
+
+<i class="fa-solid fa-heart fav"></i>
+
+<img src="rrr.jpg">
+
+<h4>RRR</h4>
+
+<p>Epic Action Drama</p>
+
+<p>⭐9/10</p>
+
+</div>
+
+</a>
+
+
+
+<a href="vikram.html">
+
+<div class="movie-card">
+
+<i class="fa-solid fa-heart fav"></i>
+
+<img src="vikram.jpg">
+
+<h4>Vikram</h4>
+
+<p>Action Thriller</p>
+
+<p>⭐8.8/10</p>
+
+</div>
+
+</a>
+
+</div>
+
+
+<div class="movie-grid container mt-5">
+
+
+<a>
+
+<div class="movie-card">
+
+<i class="fa-solid fa-heart fav"></i>
+
+<img src="Dhurandhar.jpg">
+
+<h4>Dhurandhar</h4>
+
+<p>Thriller-Action</p>
+
+<p>⭐9.9/10</p>
+
+</div>
+
+</a>
+
+
+
+<a>
+
+<div class="movie-card">
+
+<i class="fa-solid fa-heart fav"></i>
+
+<img src="chhichhore.jpg">
+
+<h4>Chhichhore</h4>
+
+<p>Comedy Drama</p>
+
+<p>⭐9/10</p>
+
+</div>
+
+</a>
+
+
+
+<a>
+
+<div class="movie-card">
+
+<i class="fa-solid fa-heart fav"></i>
+
+<img src="uri.jpg">
+
+<h4>URI</h4>
+
+<p>War Action Thriller</p>
+
+<p>⭐8.9/10</p>
+
+</div>
+
+</a>
+
+
+
+<a>
+
+<div class="movie-card">
+
+<i class="fa-solid fa-heart fav"></i>
+
+<img src="traintobusan.jpg">
+
+<h4>Train to Busan</h4>
+
+<p>Action Thriller</p>
+
+<p>⭐8.6/10</p>
+
+</div>
+
+</a>
+
+</div>
+
+<footer>
+
+<p>
+
+© 2026 CineAura | All rights reserved.
+
+</p>
+
+</footer>
+
+</div>
+<script>
+const searchInput = document.getElementById("searchMovie");
+
+searchInput.addEventListener("keyup", function() {
+
+    let filter = searchInput.value.toLowerCase();
+    let movies = document.querySelectorAll(".movie-card");
+
+    movies.forEach(function(movie){
+        let title = movie.querySelector("h4").textContent.toLowerCase();
+
+        if(title.includes(filter)){
+            movie.style.display = "block";
+        }else{
+            movie.style.display = "none";
+        }
+    });
+
+});
+</script>
+
+<script>
+
+let favButtons = document.querySelectorAll(".fav");
+
+favButtons.forEach(function(btn){
+
+    btn.addEventListener("click", function(e){
+
+        e.preventDefault();
+
+        let movieName = btn.parentElement.querySelector("h4").textContent;
+
+        let favMovies = JSON.parse(localStorage.getItem("favorites")) || [];
+
+        if(!favMovies.includes(movieName)){
+            favMovies.push(movieName);
+            localStorage.setItem("favorites", JSON.stringify(favMovies));
+            alert(movieName + " added to favorites!");
+        }
+
+    });
+
+});
+
+</script>
+
+<script>
+
+function playTrailer(){
+    window.open("https://www.youtube.com/watch?v=TcMBFSGVi1c");
+}
+
+</script>
+
+<script>
+
+const toggle = document.getElementById("theme-toggle");
+
+if(localStorage.getItem("theme") === "dark"){
+    toggle.checked = true;
+}
+
+toggle.addEventListener("change", function(){
+
+    if(toggle.checked){
+        localStorage.setItem("theme","dark");
+    }else{
+        localStorage.setItem("theme","light");
+    }
+
+});
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

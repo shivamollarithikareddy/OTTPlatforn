@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Trending Movies</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/png" href="Photos/favicon-32x32.png">
+</head>
+
+<body>
+
+<input type="checkbox" id="theme-toggle" hidden>
+
+<div class="page">
+
+<label for="theme-toggle" class="theme-btn">
+
+🌙 Theme
+
+</label>
+
+<header>
+    
+Trending Movies 🔥
+</header>
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="movies.html">Movies</a>
+
+<a href="trending.html">Trending</a>
+
+<a href="contact.html">Contact</a>
+
+</nav>
+
+
+
+<h1 class="text-center">
+
+🔥 Trending This Week
+
+</h1>
+
+
+
+<div class="movie-grid">
+
+<div class="movie-card">
+
+<h3>Salaar</h3>
+<img src="salaar.webp">
+<p>High-octane action entertainer</p>
+
+<p class="rating">⭐9.1</p>
+
+</div>
+
+
+<div class="movie-card">
+
+<h3>Leo</h3>
+<img src="leo.jpg">
+<p>Action Thriller</p>
+
+<p class="rating">⭐8.7</p>
+
+</div>
+
+
+<div class="movie-card">
+
+<h3>Dune</h3>
+<img src="dune.jpg">
+<p>Sci-Fi Epic</p>
+
+<p class="rating">⭐9.3</p>
+
+</div>
+
+
+<div class="movie-card">
+
+<h3>Animal</h3>
+<img src="animal.jpg">
+<p>Crime Drama</p>
+
+<p class="rating">⭐8.4</p>
+
+</div>
+
+</div>
+
+
+<footer>
+
+Trending Updates Every Week ⭐
+
+</footer>
+
+</div>
+
+
+<script>
+
+const toggle = document.getElementById("theme-toggle");
+
+if(localStorage.getItem("theme") === "dark"){
+    toggle.checked = true;
+}
+
+toggle.addEventListener("change", function(){
+
+    if(toggle.checked){
+        localStorage.setItem("theme","dark");
+    }else{
+        localStorage.setItem("theme","light");
+    }
+
+});
+
+</script>
+</body>
+
+</html>

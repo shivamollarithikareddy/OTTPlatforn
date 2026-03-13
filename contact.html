@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Contact CineAura</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/png" href="Photos/favicon-32x32.png">
+</head>
+
+<body>
+
+<input type="checkbox" id="theme-toggle" hidden>
+
+<div class="page">
+
+<label for="theme-toggle" class="theme-btn">
+
+🌙 Theme
+
+</label>
+
+<header>
+Contact CineAura 📞
+
+</header>
+
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="movies.html">Movies</a>
+
+<a href="trending.html">Trending</a>
+
+<a href="contact.html">Contact</a>
+
+</nav>
+
+
+
+<h1 class="text-center">
+
+Get In Touch ✨
+
+</h1>
+
+<table>
+
+<tr>
+
+<th>Email</th>
+
+<th>Phone</th>
+
+<th>Location</th>
+
+</tr>
+
+<tr>
+
+<td>cineaura@gmail.com</td>
+
+<td>+91 9999999999</td>
+
+<td>Hyderabad</td>
+
+</tr>
+
+</table>
+
+
+
+<h2 class="text-center">
+
+Send Us a Message
+
+</h2>
+
+
+<form id="contactForm">
+<input id="userName" placeholder="Your Name">
+<input id="email" placeholder="Email">
+<p id="errmsg" style="color:whitesmoke;"></p>
+<textarea id="message" placeholder="Message"></textarea>
+<button> Send Message </button>
+</form>
+
+<footer>
+
+We usually reply within 24 hours ❤️
+
+</footer>
+
+</div>
+
+<script>
+
+document.getElementById("contactForm").addEventListener("submit", function(e){
+
+let name = document.getElementById("userName").value.trim();
+let email = document.getElementById("email").value.trim();
+let message = document.getElementById("message").value.trim();
+
+let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+if(name === "" || email === "" || message === ""){
+    alert("All fields are required!");
+    e.preventDefault();
+}
+
+else if(!email.match(emailPattern)){
+    alert("Enter a valid email!");
+    e.preventDefault();
+}
+
+else{
+    alert("Message sent successfully!");
+}
+
+});
+
+</script>
+<script>
+let email = document.getElementById("email");
+let errmsg = document.getElementById("errmsg");
+
+email.addEventListener("input", function(){
+
+    if(email.value.includes("@")){
+        errmsg.textContent = "";
+    }
+    else{
+        errmsg.textContent = "Email must contain '@'";
+    }
+
+});
+</script>
+<script>
+
+const toggle = document.getElementById("theme-toggle");
+
+if(localStorage.getItem("theme") === "dark"){
+    toggle.checked = true;
+}
+
+toggle.addEventListener("change", function(){
+
+    if(toggle.checked){
+        localStorage.setItem("theme","dark");
+    }else{
+        localStorage.setItem("theme","light");
+    }
+
+});
+
+</script>
+</body>
+
+</html>
